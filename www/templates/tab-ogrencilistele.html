@@ -1,0 +1,26 @@
+<ion-view view-title="Ogrenciler">
+  <ion-content>
+    <ion-list>
+      <a href="#/tab/chats" class="button button-block button-energized">Menuye Geri Don</a>
+      <a href="#/tab/ogrenciekle" class="button button-block button-calm">Ogrenci Ekle</a>
+      <a href="#/tab/ogrenciizinleri" class="button button-block button-positive">Ogrenci Izinleri</a>
+      <div class="list">
+        <div class="item item-input-inset">
+          <label class="item-input-wrapper">
+            <input type="text" placeholder="aranacak ogrenci isimi girin" ng-model="aramakelimesi">
+          </label>
+          <button class="button button-block button-balanced" ng-click="ogrenciara(aramakelimesi)">
+            Ara
+          </button>
+        </div>
+      </div>
+      <ion-item class="item-remove-animate  item-icon-right" ng-repeat="x in ogrenciler" href="#/tab/ogrencilistele/{{x.OgrenciID}}">
+        <h2>{{x.AdSoyad}}</h2>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+        <ion-option-button class="button-assertive" ng-click="ogrencisil(x.OgrenciID)">
+          Sil
+        </ion-option-button>
+    </ion-list>
+</ion-content>
+</ion-view>
+

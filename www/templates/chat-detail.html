@@ -1,0 +1,50 @@
+<ion-view view-title="Ogrenci">
+  <ion-content>
+    <ion-list>
+
+      <a href="#/tab/chats" class="button button-block button-energized">Menuye Geri Don</a>
+
+      <ion-item class="item-remove-animate" ng-repeat="x in ogrenci">
+        <h2>{{x.AdSoyad}}</h2>
+        <p>{{" - - - - - "}}</p>
+        <p>{{"Oda Numarası = " + x.OdaNumarasi}}</p>
+        <p>{{"Telefon = " + x.Telefon}}</p>
+        <p>{{"Mail = " + x.Mail}}</p>
+        <p>{{"Acil Durum Telefon = " + x.AcilDurumTelefon}}</p>
+        <p>{{"TC = " + x.TC}}</p>
+        <p>{{"Dogum Tarihi = " + x.DogumTarihi}}</p>
+        <p>{{"Veli Ad Soyad = " + x. VeliAdSoyad}}</p>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-item class="item-remove-animate" ng-repeat="x in ogrenci">
+        <h2>Guncelle</h2>
+        <div class="list">
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Oda Numarası</span>
+            <input type="text" placeholder={{x.OdaNumarasi}} ng-model="odanumarasi">
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Telefon</span>
+            <input type="text" placeholder={{x.Telefon}} ng-model="telefon">
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Mail</span>
+            <input type="text" placeholder={{x.Mail}} ng-model="mail">
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Acil Durum Telefon</span>
+            <input type="text" placeholder={{x.AcilDurumTelefon}} ng-model="acildurumtelefon">
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Veli Ad Soyad</span>
+            <input type="text" placeholder={{x.VeliAdSoyad}} ng-model="veliadsoyad">
+          </label>
+        </div>
+        <button class="button button-block button-energized" ng-click="ogrenciguncelle(x.OgrenciID,odanumarasi,telefon,mail,acildurumtelefon,veliadsoyad)">Guncelle</button>
+
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

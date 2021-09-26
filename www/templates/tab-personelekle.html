@@ -1,0 +1,18 @@
+<ion-view view-title="Personel Gorev">
+  <ion-content>
+    <a href="#/tab/chats" class="button button-block button-energized">Menuye Geri Don</a>
+    <a href="#/tab/yenipersonelekle" class="button button-block button-calm">Yeni Personel Kayit</a>
+    <a href="#/tab/yenigorevekle" class="button button-block button-balanced">Yeni Gorev</a>
+    <ion-list>
+      <ion-item class="item-remove-animate" ng-repeat="x in gorevler">
+        <h2>{{x.PersonelAdSoyad}}</h2>
+        <p>{{" - - - - - "}}</p>
+        <p>Gorev aciklama</p>
+        <p>{{"-> " + x.GorevAciklama}}</p>
+        <p>Gorevi Atayan Yonetici</p>
+        <p>{{"-> " + x.GoreviAtayanYoneticiAdSoyad}}</p>
+        <button class="button button-block button-assertive" ng-click="gorevsil(x.GorevID)">Gorev sil</button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,18 @@
+<ion-view view-title="Personel Ekle">
+  <ion-content>
+    <a href="#/tab/chats" class="button button-block button-dark">Menuye Geri Don</a>
+    <ion-list>
+      <div class="list">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Ad Soyad</span>
+          <input type="text" placeholder="Ad Soyad" ng-model="personel.adsoyad">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Telefon</span>
+          <input type="text" placeholder="Telefon" ng-model="personel.telefon">
+        </label>
+      </div>
+      <button class="button button-block button-energized" ng-click="yenipersonelekle(personel)">Personel Ekle</button>
+    </ion-list>
+  </ion-content>
+</ion-view>

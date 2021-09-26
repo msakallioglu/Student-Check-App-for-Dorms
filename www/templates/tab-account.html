@@ -1,0 +1,19 @@
+<ion-view view-title="Mevcut ızınler">
+  <ion-content>
+    <a href="#/tab/giris" class="button button-block button-assertive">Cikis</a>
+    <a href="#/tab/izinistegi" class="button button-block button-calm">Izin istegi Olustur</a>
+    <ion-list>
+      <p>Mevcut Izinler</p>
+      <ion-item class="item-remove-animate  item-icon-right" ng-repeat="x in ogrenciizin">
+        <h2>{{x.OgrenciAdSoyad}}</h2>
+        <p>{{" - - - - - "}}</p>
+        <p>izin aciklama</p>
+        <p>{{"-> " + x.IzinAciklama}}</p>
+        <p>izin Istenildigi Tarih</p>
+        <p>{{"-> " + x.IzinIstenildigiTarih}}</p>
+        <p style="color:{{x.IzinOnayDurumu== 1 ? 'green':'red'}};">Izin Onay Durumu</p>
+        <button class="button button-block button-assertive" ng-click="iziniptal(x.IzinID)">Izin Iptal</button>
+        </ion-item>
+     </ion-list>
+  </ion-content>
+</ion-view>

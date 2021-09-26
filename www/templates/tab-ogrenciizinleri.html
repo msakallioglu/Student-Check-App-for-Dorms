@@ -1,0 +1,23 @@
+<ion-view view-title="Ogrenci Izinleri">
+  <ion-content>
+    <ion-list>
+
+      <a href="#/tab/chats" class="button button-block button-energized">Menuye Geri Don</a>
+
+      <ion-item class="item-remove-animate" ng-repeat="x in ogrenciz">
+        <h2>{{x.OgrenciAdSoyad}}</h2>
+        <p>{{" - - - - - "}}</p>
+        <p>izin aciklama</p>
+        <p>{{"-> " + x.IzinAciklama}}</p>
+        <p>izin Istenildigi Tarih</p>
+        <p>{{"-> " + x.IzinIstenildigiTarih}}</p>
+        <p>Onaylayan Yonetici</p>
+        <p>{{"-> " + x.YoneticiAdSoyad}}</p>
+        <p style="color:{{x.IzinOnayDurumu== 1 ? 'green':'red'}};">Izin Onay Durumu</p>
+        <button class="button button-block button-balanced" ng-click="onay(x.IzinID,1)">Izin istegini onayla</button>
+        <button class="button button-block button-assertive" ng-click="onaylama(x.IzinID,0)">Izin istegini onaylama</button>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

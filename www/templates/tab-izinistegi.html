@@ -1,0 +1,22 @@
+<ion-view view-title="İzin ekle">
+  <ion-content>
+    <a href="#/tab/account" class="button button-block button-dark">Menuye Geri Don</a>
+    <ion-list>
+      <div class="list">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">ID'nizi girin</span>
+          <input type="text" placeholder="OgrenciID" ng-model="izin.OgrenciID">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">izin istenildigi tarihi</span>
+          <input type="text" placeholder="YY-AA-GG Seklinde Girin" ng-model="izin.IzinIstenildigiTarih">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">izin aciklama</span>
+          <input type="text" placeholder="Aciklama" ng-model="izin.izinaciklama">
+        </label>
+      </div>
+      <button class="button button-block button-energized" ng-click="izinekle(izin)">Izin Ekle</button>
+    </ion-list>
+  </ion-content>
+</ion-view>

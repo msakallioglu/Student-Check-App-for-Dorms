@@ -1,0 +1,13 @@
+<ion-view view-title="Menu"> 
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="x in Yonetici">
+        <h2>Hosgeldiniz {{x.AdSoyad}}</h2>
+        <!--<button class="button button-block button-positive" ng-click="OgrenciListele(x.YoneticiID)">Ogrenci Listele</button>-->
+      </ion-item>
+      <a href="#/tab/ogrencilistele" class="button button-block button-calm">Ogrenci Islemleri</a>
+      <a href="#/tab/personelekle" class="button button-block button-energized">Personel Islemleri</a>
+      <a href="#/tab/giris" class="button button-block button-assertive">Cikis</a>
+    </ion-list>
+  </ion-content>
+</ion-view>

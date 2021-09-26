@@ -1,0 +1,33 @@
+<ion-view view-title="Giris">
+  <ion-content class="padding">
+    <ion-list>
+      <h3 style="color:darkblue">Yonetici Girisi</h3>
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Yonetici TC</span>
+          <input type="text" ng-model="TC">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Sifre</span>
+          <input type="password" ng-model="sifre">
+        </label>
+      </div>
+      <button class="button button-block button-energized" ng-click="Yoneticigirisyap(TC,sifre)">Giris Yap</button>
+    </ion-list>
+
+    <ion-list>
+      <h3 style="color:darkblue">Ogrenci Girisi</h3>
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label"> Ogrenci TC</span>
+          <input type="text" ng-model="oTC">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Sifre</span>
+          <input type="password" ng-model="osifre">
+        </label>
+      </div>
+      <button class="button button-block button-calm" ng-click="Ogrencigirisyap(oTC,osifre)">Giris Yap</button>
+    </ion-list>
+  </ion-content>
+</ion-view>

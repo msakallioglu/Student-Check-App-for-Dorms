@@ -1,0 +1,47 @@
+<ion-view view-title="Ogrenci Ekle">
+  <ion-content>
+    <a href="#/tab/chats" class="button button-block button-dark">Menuye Geri Don</a>
+    <ion-list>
+      <div class="list">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Ad Soyad</span>
+          <input type="text" placeholder="Ad Soyad" ng-model="yeniogrenci.adsoyad">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">TC</span>
+          <input type="text" placeholder="TC" ng-model="yeniogrenci.tc">
+        </label>
+
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Dogum Tarihi</span>
+          <input type="text" placeholder="YY-AA-GG Seklinde Girin" ng-model="yeniogrenci.dogumtarihi">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Oda Numarası</span>
+          <input type="text" placeholder="OdaNumarasi" ng-model="yeniogrenci.odanumarasi">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Telefon</span>
+          <input type="text" placeholder="Telefon" ng-model="yeniogrenci.telefon">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Mail</span>
+          <input type="text" placeholder="Mail" ng-model="yeniogrenci.mail">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Acil Durum Telefon</span>
+          <input type="text" placeholder="AcilDurumTelefon" ng-model="yeniogrenci.acildurumtelefon">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Veli Ad Soyad</span>
+          <input type="text" placeholder="VeliAdSoyad" ng-model="yeniogrenci.veliadsoyad">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Sifre</span>
+          <input type="text" placeholder="Yeni sifre belirleme" ng-model="yeniogrenci.sifre">
+        </label>
+      </div>
+        <button class="button button-block button-energized" ng-click="ogrenciekle(yeniogrenci)">Ogrenci Ekle</button>
+    </ion-list>
+  </ion-content>
+</ion-view>
